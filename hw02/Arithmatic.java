@@ -36,11 +36,13 @@ public class Arithmatic {
         double totalEnvelopeCostTax$=3.45;
         double totalTaxCost$=1.48;
         
+        
+        
         System.out.println("The item being bought is socks");
         System.out.println("I bought 3 pairs of socks");
         System.out.println("The cost of each sock is $2.58"); 
         System.out.println("The sales tax for each sock is $ "+ 
-            ((sockCost$)*taxPercent)+"");
+            ((double)Math.round((sockCost$*taxPercent)*100)/(100.0))+""); 
         System.out.println("The total cost of socks is (with no tax) $ "+
             (nSocks*sockCost$)+""); 
             
@@ -48,7 +50,7 @@ public class Arithmatic {
         System.out.println("I bought 1 envelope"); 
         System.out.println("The cost of the envelopes is $3.25"); 
         System.out.println("The sales tax for each envelope is $ "+
-            ((envelopeCost$)*taxPercent)+""); 
+            ((double)Math.round((envelopeCost$*taxPercent)*100)/(100.0))+""); 
         System.out.println("The total cost of envelopes is (with no tax) $ "+
             (nEnvelopes*envelopeCost$)+"");
         
@@ -56,7 +58,7 @@ public class Arithmatic {
         System.out.println("I bought 6 drinking glasses"); 
         System.out.println("The cost of each drinking glass is $2.29"); 
         System.out.println("The sales tax for each glass is $ "+
-            ((glassCost$)*taxPercent)+"");
+            ((double)Math.round((glassCost$*taxPercent)*100)/(100.0))+"");
         System.out.println("The total cost of glasses is (with no tax) $ "+
             (nGlasses*glassCost$)+"");
         
