@@ -9,19 +9,24 @@ public class LoopTheLoop {
     Scanner myScanner; 
     myScanner=new Scanner (System.in);
     
-System.out.println("Enter an int between 1 and 15 - "); 
+ 
 
+
+
+boolean p=true;
+
+while(p==true){
+    
+System.out.println("Enter an int between 1 and 15 - "); 
 int counter=0; 
 int nStars=myScanner.nextInt();
+ 
 
 
 if(nStars>15||nStars<1){
     System.out.println("Your int was not in the range"); 
+    return; 
 } 
-return; 
-
-
-while(true){
     
     
     for(int i=0; i<nStars; i++){
@@ -45,7 +50,7 @@ while(true){
 System.out.println("Enter y or Y to continue"); 
 String letter=myScanner.next(); 
 if(letter.equals ("y") ||letter.equals ("Y")){
-    
+    p=true; 
 }else{
     break; 
 }
