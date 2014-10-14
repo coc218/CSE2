@@ -10,59 +10,57 @@ public class Roulette {
     public static void main (String [ ] args) {
         
 
-int guess= (int)(Math.random()*38); 
-// establish your guess value
+int guess= (int)(Math.random()*38);
+// generate guess number 
 
 
-double money=0; // keep track of money
-int winCount=0; // keep track of how many times number matches guess
-int loseCount=0; // keep track how many times number does not match guess 
-int profit=0; // how much you win
 
-//int counter1=0;  
-//int counter=0; 
-//int guessCount=0;   
+double money=0; // initialize and declare money
+int winCount = 0; //initialize and declare your win count
+int loseCount = 0; //initialize and declare your lose count
+int profit = 0;  //initialize and declare your profit count
+int counter1=0;  //initialize and declare your counter
+int counter=0; //initialize and declare your count
 
-for(int counter=0; counter<1000; counter++){
-//repeat 1000 times 
-int guessCount=0;   
-//guessCount refresh every time 
 
-for(int counter1=0; counter1<100; counter1++){
- // repeat 100 times   
-   
+while(counter<1000){ //enter 1000 loop
+    counter1 = 0; //reset 100 loop back to 0 when entering 1000 loop
 
-int number=(int)(Math.random()*38); 
-// generate a new random number each 100 times 
+   int guessCount=0;
+// reset guesscount each 1000 times
+        while(counter1<100){ //100 loop 
 
-if(guess == number){ // see if number matches 
-    guessCount++; // each time adds one each 100 time
-    winCount++; // how many times you win each 100
+            int number=(int)(Math.random()*38); 
+            // generate random number
+            if(guess == number){ 
+             guessCount++; //increment guessCount
+             winCount++;  //increment winCount
+            }
+            
+            counter1++;
+        }
     
-}   
-    //System.out.println("!!!!"+guessCount);
-//counter1++;
+    money=(winCount*36); //the money you obtain
+    
+
+    if(guessCount>=3){ // you walk away with profit
+        profit++; 
+    } 
+
+    if(guessCount==0){ // you lose money
+        loseCount++; 
+    } 
+
+counter++;
 }
-
-//System.out.println("~"+guessCount);
- if(guessCount>=3){ // see how much you generate profit
-    profit++; 
-} 
-
-//System.out.println("!!!!"+guessCount); 
-if(guessCount==0){ // see how much you lose profit 
-    loseCount++; 
-} 
-//System.out.println("!!!!"+loseCount); 
-//counter++;
-}
-
-money=(winCount*36); // the amount of money you win
-//System.out.println(winCount);
 
 System.out.println("The number of times your number never comes up is " +loseCount); 
 System.out.println("Your total winnings is " +money); 
-System.out.println("The number of times you walked away with profit is " +profit); 
-    
+System.out.println("The number of times you walked away with profit is " +profit);
+
+ 
+
+
+
     }
 }
