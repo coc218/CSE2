@@ -28,7 +28,7 @@ public class NumberStack {
 
                 System.out.println("");
 
-                for (int space = 1; space < y; space++) {
+                for (int space = 1; space <= y; space++) {
                     System.out.print(" ");
                 } // centering the pyramid based on the number inputted
 
@@ -38,7 +38,7 @@ public class NumberStack {
                     System.out.print(digit);
                 }
 
-                for (int space = 1; space < y; space++) {
+                for (int space = 1; space <= y; space++) {
                     System.out.print(" ");
                 } // centering the pyramid 
 
@@ -47,7 +47,7 @@ public class NumberStack {
 
             System.out.println("");
 
-            for (int space = 1; space < y; space++) {
+            for (int space = 1; space <= y; space++) {
                 System.out.print(" ");
             }// centering the dashes 
 
@@ -57,7 +57,7 @@ public class NumberStack {
 
             }
 
-            for (int space = 1; space < y; space++) {
+            for (int space = 1; space <= y; space++) {
                 System.out.print(" ");
             }// centering dashes 
 
@@ -88,7 +88,7 @@ public class NumberStack {
         // reset back to 0 each time you reenter 
                 space = 1;
 
-                while (space < y) {
+                while (space <= y) {
                     System.out.print(" ");
                     space++;
                 } // centering the numbers 
@@ -100,7 +100,7 @@ public class NumberStack {
                 // how many numbers to print out in each row
                 }
 
-                while (space < y) {
+                while (space <= y) {
                     System.out.print(" ");
                     space++;
                 }// cenering the numbers 
@@ -112,7 +112,7 @@ public class NumberStack {
             System.out.println("");
 
             space = 1;
-            while (space < y) {
+            while (space <= y) {
                 System.out.print(" ");
                 space++;
             }// centering the dashes 
@@ -125,7 +125,7 @@ public class NumberStack {
                 dash++;
             } // odd number of dashes 
 
-            while (space < y) {
+            while (space <= y) {
                 System.out.print(" ");
                 space++;
             } // centering the dashes 
@@ -155,19 +155,16 @@ public class NumberStack {
                 row = 0;
 
                 space = 1;
-                if (y != 1) {
-                // does the do part of loop everytime if the space
-                // is not 1 then it won't enter it and won't print out
-                // number of spaces 
+                
 
 
                     do {
 
                         System.out.print(" ");
                         space++;
-                    } while (space < y);
+                    } while (space <= y);
                 // spacing of digit 
-                }
+                
 
                 do {
                     System.out.print(digit);
@@ -175,14 +172,14 @@ public class NumberStack {
                     row++;
                 } while (row < count);
                 space = 1;
-                if (y != 1) {
+                
                     do {
 
                         System.out.print(" ");
                         space++;
-                    } while (space < y);
+                    } while (space <= y);
                     // centering the digits 
-                }
+                
 
 
                 line++;
@@ -193,13 +190,13 @@ public class NumberStack {
             dash = 0;
 
             space = 1;
-            if (y != 1) {
+            
                 do {
 
                     System.out.print(" ");
                     space++;
-                } while (space < y);
-            }   //centering the dashes 
+                } while (space <= y);
+              //centering the dashes 
             do {
 
                 System.out.print("-");
@@ -208,15 +205,15 @@ public class NumberStack {
             } while (dash < count);
 
             space = 1;
-            if (y != 1) {
+            
                 // last block does not need a space so won't
                 //enter the do while loop 
                 do {
 
                     System.out.print(" ");
                     space++;
-                } while (space < y);
-            }
+                } while (space <= y);
+            
             digit++;
             count = count + 2;
             // counter goes up by 2 each time to compare
